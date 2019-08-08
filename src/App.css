@@ -1,33 +1,157 @@
-.App {
-  text-align: center;
+*
+{
+  margin:0;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+body
+{
+  background:#232323;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.nav
+{
+  display:flex;
+  justify-content: space-around;
+  background:#131313;
+}
+
+.nav-ul
+{
+  display:flex;
+  list-style-type: none;
+  height:100%;
   align-items: center;
+}
+
+.nav-ul a
+{
+  text-decoration:none;
+  color:#fff;
+  font-size:20px;
+  transition:0.2s all ease-in-out;
+}
+
+.nav-ul a:hover
+{
+  color:#fa0;
+}
+
+.nav-li
+{
+  padding:10px;
+}
+
+
+.logo
+{
+  padding:10px;
+  color:#fff;
+}
+
+h1 span
+{
+  color:#fa0;
+}
+
+/*actor css*/
+
+.actor-image
+{
+  height:100px;
+  max-width: 150px;
+}
+
+.image
+{
+  width:200px;
+  display:flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.actors-container, .movies-container
+{
+  padding-top:30px;
+  display:grid;
+  grid-gap:10px;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.actor-container
+{
+  border:1px solid rgba(0,0,0,0.15);
+  width:80vw;
+  display:grid;
+  grid-template-columns: 1fr 2fr 3fr 1fr 2fr;
+  text-align:center;
+  align-items:center;
+  background:#333;
+  color:white;
+}
+
+.button button
+{
+  background:#333;
+  color:#fa0;
+  border:none;
+  padding:10px;
+  position:relative;
+  cursor: pointer;
+}
+
+.button button::after
+{
+  content:'';
+  position:absolute;
+  height:99%;
+  width:99%;
+  border:1px solid #fa0;
+  top:0;
+  left:0;
+}
+
+.button button::before
+{
+  content:'';
+  position:absolute;
+  top:0;
+  left:0;
+  height:100%;
+  width:0%;
+  background:#fa0;
+  transition:0.2s all ease-in-out;
+  z-index:1;
+}
+
+.button button:hover::before
+{
+  content:'';
+  position:absolute;
+  top:0;
+  left:0;
+  height:100%;
+  width:100%;
+}
+
+.button:hover span
+{
+  color:black;
+  transition:0.2s all ease-in-out;
+}
+
+.button button span
+{
+  display:block;
+  position:relative;
+  z-index:21;
+}
+
+.delete
+{
+  transition: 0.2 color ease-in-out;
+  cursor:pointer;
+}
+
+.delete:hover
+{
+  color:#fa0;
 }
