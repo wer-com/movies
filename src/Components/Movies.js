@@ -29,7 +29,6 @@ const Movies = () => {
         <div className="category"><i onClick={()=>deleteMovies(MovieID)} className="material-icons delete">delete</i></div>
         <div className="button"><button onClick={()=>getCast(MovieID)}><span>SEE CAST</span></button></div>
     </div>):'Something went wrong';
-console.log(cast)
     return (
         <div className="movies-container">
            {moviesContent}

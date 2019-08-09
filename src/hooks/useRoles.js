@@ -41,6 +41,7 @@ const useRoles = () =>{
         getRoles,
         getCast,
         displayRole,
+        displayCast,
         isDisplayRole,
         isDisplayCast
     }
