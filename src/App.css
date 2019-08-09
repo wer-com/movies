@@ -13,6 +13,7 @@ body
   display:flex;
   justify-content: space-around;
   background:#131313;
+  height:10vh;
 }
 
 .nav-ul
@@ -36,16 +37,27 @@ body
   color:#fa0;
 }
 
+
 .nav-li
 {
   padding:10px;
 }
 
+h3
+{
+  color:#fff;
+  margin:10px;
+}
 
 .logo
 {
   padding:10px;
+  padding-top:0px;
   color:#fff;
+  display:flex;
+  list-style-type: none;
+  height:100%;
+  align-items: center;
 }
 
 h1 span
@@ -96,14 +108,15 @@ h1 span
   padding:10px;
   position:relative;
   cursor: pointer;
+  border:1px solid transparent;
 }
 
 .button button::after
 {
   content:'';
   position:absolute;
-  height:99%;
-  width:99%;
+  height:100%;
+  width:100%;
   border:1px solid #fa0;
   top:0;
   left:0;
@@ -154,4 +167,174 @@ h1 span
 .delete:hover
 {
   color:#fa0;
+}
+
+.add-button
+{
+  position:fixed;
+  background:#fa0;
+  padding:30px 40px;
+  border-radius: 50%;
+  color:#333;
+  font-size:40px;
+  bottom:20px;
+  right:20px;
+  cursor:pointer;
+  transition:1s all ease-in-out;
+}
+
+.add-button:hover
+{
+  transform: scale(1.1);
+}
+
+.add-actor
+{
+  position:fixed;
+  background:#232323;
+  z-index:30;
+  right:40px;
+  bottom:0;
+}
+
+.add-actor-form
+{
+  width:450px;
+  height:458px;
+  background:#fff;
+}
+
+.close-x
+{
+  color:white;
+  position:absolute;
+  top:-5px;
+  right:10px;
+  font-size:30px;
+  cursor:pointer;
+  padding:10px;
+  transition:0.2s all ease-in-out;
+}
+
+.close-x:hover
+{
+  transform: scale(1.1);
+}
+
+.add-actor-form
+{
+  position:relative;
+}
+
+.add-actor-form::before
+{
+  position:absolute;
+  content:'Add actor';
+  color:#fff;
+  background:#333;
+  width:430px;
+  height:40px;
+  padding-left:20px;
+  padding-top:10px;
+  font-size:22px;
+}
+
+.add-actor-form div input
+{
+  padding:10px 10px;
+  width:430px;
+  border:none;
+  border-bottom: 1px solid rgba(0,0,0,0.25);
+}
+
+.add-actor-form div textarea
+{
+  resize: none;
+  width:424px;
+  padding:10px;
+  height:230px;
+  border:none;
+}
+
+.add-actor-form div button
+{
+  margin-left:10px;
+  padding:10px;
+  width:150px;
+  border:none;
+  background:rgb(100, 100, 233);
+  color:white;
+  cursor:pointer;
+}
+
+.first-name
+{
+  padding-top:50px;
+}
+
+.roles-container
+{
+  position:fixed;
+  color:#fff;
+  top:0;
+  width:100%;
+  height:100%;
+  background:#131313;
+  z-index:30;
+  display:grid;
+  align-content: center;
+  justify-content: center;
+}
+
+.roles-container::before
+{
+  color:#fff;
+  content:'ROLES:';
+  text-align:center;
+  font-size:20px;
+  padding:10px;
+}
+
+.x-button
+{
+  position:fixed;
+  top:10px;
+  right:40px;
+  font-size:40px;
+  cursor:pointer;
+}
+
+.role
+{
+  background:#333;
+  width:500px;
+  height:500px;
+  color:#fff;
+}
+
+.role div
+{
+  text-align:center;
+  padding:10px;
+}
+
+.role div:nth-child(2n)
+{
+  background:#232323;
+}
+
+@media screen and (max-width: 550px) {
+  .add-actor 
+  {
+    display:none;
+  }
+  .add-button
+  {
+    display:none;
+  }
+  .actor-container
+  {
+    font-size:10px;
+    grid-template: 1fr 1fr 1fr 1fr 1fr;
+  }
 }
